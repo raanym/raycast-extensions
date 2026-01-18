@@ -6,16 +6,12 @@ import {
   buildPerplexityUrl,
 } from "./utils/search-urls";
 
-interface Arguments {
-  query: string;
-}
-
 export default async function Command(
-  props: LaunchProps<{ arguments: Arguments }>,
+  props: LaunchProps<{ arguments: Arguments.SearchAll }>,
 ) {
   const { query } = props.arguments;
   await open(buildGoogleAiUrl(query));
-  await open(buildChatGptUrl(query), "com.apple.Safari");
+  await open(buildChatGptUrl(query));
   await open(buildPerplexityUrl(query));
   await open(buildGrokUrl(query));
 }

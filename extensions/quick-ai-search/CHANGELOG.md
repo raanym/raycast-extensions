@@ -1,3 +1,3 @@
 # Quick AI Search
-## [1.0.0] - 2025-01-17
+## [1.0.0] - {PR_MERGE_DATE}
 - Initial release.
